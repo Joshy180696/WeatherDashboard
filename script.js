@@ -16,7 +16,7 @@ async function getWeather() {
     weatherResult.style.display = 'none';
 
     try {
-        const response = await fetch(`https://localhost:7173/api/WeatherForecast/${encodeURIComponent(cityInput)}`);
+        const response = await fetch(`https://weatherdashboardapi.onrender.com/api/WeatherForecast/${encodeURIComponent(cityInput)}`);
         if (!response.ok) throw new Error('City not found or API error.');
 
         const data = await response.json();
